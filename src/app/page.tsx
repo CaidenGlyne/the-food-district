@@ -1,69 +1,62 @@
-import Image from "next/image";
+
+import { FloatingFoodHero } from "@/components/ui/hero-section-7";
+import MenuSection from "@/components/MenuSection";
+import CategorySection from "@/components/CategorySection";
+import SignatureDishes from "@/components/SignatureDishes";
+
+const heroImages = [
+  {
+    src: "https://cdn.21st.dev/assets/mirror/cc/cc7d7fbb538d93322e189b55ae4c6eed95aab7da267a9a095b39216070ef65b0.png",
+    alt: "Delicious cheeseburger",
+    className:
+      "left-1 top-7 w-28 sm:left-6 sm:top-16 sm:w-44 md:left-12 md:top-20 md:w-56 lg:left-20 lg:w-72",
+  },
+  {
+    src: "https://cdn.21st.dev/assets/mirror/95/95bc0d9d69e76d3729ca42f9525bafd449fd27fa41c9393d1deccb85d79b0639.png",
+    alt: "Asian dumplings in a bamboo steamer",
+    className:
+      "right-1 top-7 w-28 sm:right-6 sm:top-12 sm:w-44 md:right-12 md:top-16 md:w-52 lg:right-20 lg:w-64",
+  },
+  {
+    src: "https://cdn.21st.dev/assets/mirror/6e/6e4600ac05444d9dc0396906da4174dcfe42a64c14082d939f0f57cb2ed8113d.png",
+    alt: "Fresh pizza slice",
+    className:
+      "bottom-28 right-1 w-32 sm:bottom-16 sm:right-8 sm:w-44 md:bottom-16 md:right-16 md:w-52 lg:bottom-16 lg:right-28 lg:w-64",
+  },
+  {
+    src: "https://cdn.21st.dev/assets/mirror/8e/8ec4fbab8445c1769d3200d674cd3731a0550b21c87bb8bc6938cb3a05932e5b.png",
+    alt: "Fresh basil leaf",
+    className:
+      "left-[25%] top-[18%] w-7 sm:left-[32%] sm:top-[18%] sm:w-12 md:w-14",
+  },
+  {
+    src: "https://cdn.21st.dev/assets/mirror/e7/e758e9c35a8360f201c40d0bf3e3433c2b6ff3f759763eb697cbc3803af80e18.png",
+    alt: "Fresh tomato slice",
+    className:
+      "right-[20%] top-[23%] w-6 sm:right-[25%] sm:top-[26%] sm:w-10 md:w-12",
+  },
+  {
+    src: "https://cdn.21st.dev/assets/mirror/e7/e758e9c35a8360f201c40d0bf3e3433c2b6ff3f759763eb697cbc3803af80e18.png",
+    alt: "Fresh tomato slice",
+    className:
+      "bottom-[25%] left-[16%] hidden w-10 sm:block md:left-[22%] md:w-12",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main className="min-h-screen">
+      <FloatingFoodHero
+        title="A world of flavour. One destination."
+        description="From juicy burgers and handcrafted pizzas to delicious dumplings and everything in between. Discover your next favourite at The Food District."
+        images={heroImages}
+      />
+
+      <CategorySection />
+
+      <SignatureDishes />
+
+      <MenuSection />
+    </main>
   );
 }

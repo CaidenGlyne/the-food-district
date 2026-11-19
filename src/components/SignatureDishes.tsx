@@ -1,5 +1,6 @@
 
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 const signatureDishes = [
   {
@@ -101,13 +102,13 @@ export default function SignatureDishes() {
                 {dish.description}
               </p>
 
-              <a
-                href="#menu"
-                className="mt-5 inline-flex items-center gap-2 text-xs font-bold text-[#b7472a] transition-all hover:gap-3"
-              >
-                Explore the menu
-                <ArrowUpRight size={15} />
-              </a>
+              <Link
+  href="/menu"
+  className="mt-5 inline-flex items-center gap-2 text-xs font-bold text-[#b7472a] transition-all hover:gap-3"
+>
+  Explore the menu
+  <ArrowUpRight size={15} />
+</Link>
             </article>
           ))}
         </div>

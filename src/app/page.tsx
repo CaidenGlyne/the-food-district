@@ -3,6 +3,8 @@ import { FloatingFoodHero } from "@/components/ui/hero-section-7";
 import MenuSection from "@/components/MenuSection";
 import CategorySection from "@/components/CategorySection";
 import SignatureDishes from "@/components/SignatureDishes";
+import RestaurantInfo from "@/components/RestaurantInfo";
+import Footer from "@/components/Footer";
 
 const heroImages = [
   {
@@ -45,7 +47,7 @@ const heroImages = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main id="home" className="min-h-screen">
       <FloatingFoodHero
         title="A world of flavour. One destination."
         description="From juicy burgers and handcrafted pizzas to delicious dumplings and everything in between. Discover your next favourite at The Food District."
@@ -57,6 +59,8 @@ export default function Home() {
       <SignatureDishes />
 
       <MenuSection />
+      <RestaurantInfo />
+      <Footer />
     </main>
   );
 }

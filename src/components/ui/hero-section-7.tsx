@@ -108,7 +108,7 @@ export function FloatingFoodHero({
 
         <div className="mt-8 flex flex-col items-center justify-center gap-3.5 sm:mt-9 sm:flex-row sm:gap-4">
           <Link
-            href="#menu"
+            href="/menu"
             className="group flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-[#b7472a] px-8 py-4 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#963a23] hover:shadow-xl sm:w-auto"
           >
             Explore our menu
